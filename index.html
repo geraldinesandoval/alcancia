@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alcancia Digital</title>
+</head>
+<body>
+
+    <header>
+        <h1>Simulador de Alcancia Digital</h1>
+    </header>
+
+    <main>
+        <section id="balance">
+            <h2>Saldo Total: $<span id="saldoTotal">0.00</span></h2>
+        </section>
+
+        <hr>
+
+        <section id="operaciones">
+            <div class="card">
+                <h3>Ahorrar (Meter Dinero)</h3>
+                <select id="montoAhorrar">
+                    <option value="1"> $1 </option>
+                    <option value="2"> $2 </option>
+                    <option value="5"> $5 </option>
+                    <option value="10"> $10 </option>
+                    <option value="20"> $20 </option>
+                    <option value="50"> $50 </option>
+                    <option value="100"> $100 </option>
+                    <option value="200"> $200 </option>
+                    <option value="500"> $500 </option>
+                </select>
+                <button onclick="realizarAhorro()">Ahorrar</button>
+            </div>
+
+            <div class="card">
+                <h3>Retirar (Sacar Dinero)</h3>
+                <input type="number" id="montoRetirar" placeholder="Cantidad a retirar">
+                <button onclick="realizarRetiro()">Retirar</button>
+                <p id="mensajeError" class="error"></p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="movimientos">
+            <h2>Historial de Movimientos</h2>
+            <table>
+                <thead> 
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Monto</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody id="listaMovimientos">
+                    </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="miScript.js"></script>
+</body>
+</html>
